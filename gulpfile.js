@@ -14,7 +14,7 @@ const kit = require('gulp-kit');
 
 const paths = {
 	html: './html/**/*.kit',
-	sass: './src/sass/**/*.scss',
+	sass: './src/sass/*.scss',
 	js: './src/js/**/*.js',
 	img: './src/images/*',
 	dist: './dist',
