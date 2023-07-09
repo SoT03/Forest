@@ -12,26 +12,23 @@ html {
 
 body {
 	height: 100vh;
-}
-
-.active {
-	display: block;
-}
-
-.active-flex {
-	display: flex;
-}
-
-.hide {
-	display: none;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
 }
 
 .nav {
 	position: fixed;
-	background-color: $white;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 60px;
 	width: 100%;
+	background-color: $white;
 	font-size: 1.4rem;
-	background-color: tomato;
+	background-color: $white;
+	z-index: 10;
 
 	&__box {
 		position: relative;
@@ -43,9 +40,6 @@ body {
 
 		&-burger,
 		&-close {
-			position: absolute;
-			top: 15px;
-			left: 20px;
 			padding: 0.35em;
 			font-size: 4rem;
 			background: none;
@@ -56,7 +50,7 @@ body {
 	}
 
 	&__links--mobile {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -81,10 +75,104 @@ body {
 	}
 
 	&__logo {
-		display: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.4rem;
+		font-weight: 400;
+		color: $dark;
+		text-decoration: none;
+
+		img {
+			width: 4rem;
+			height: 4rem;
+		}
 	}
 
 	&__links--desktop {
 		display: none;
+		height: 100%;
+		font-size: 1.6rem;
 	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		height: 80px;
+
+		&__box-burger,
+		&__box-close {
+			padding: 0.35em;
+			font-size: 5rem;
+			background: none;
+			border: none;
+			cursor: pointer;
+			z-index: 10;
+		}
+
+		&__logo {
+			font-size: 3.8rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		height: 100px;
+
+		&__box {
+			display: none;
+		}
+
+		&__links--desktop {
+			display: flex;
+		}
+
+		&__link {
+			display: flex;
+			align-items: center;
+			color: $black;
+			height: 100%;
+			padding: 1em 2em;
+			margin: 0;
+			font-size: 1.6rem;
+			border: none;
+			transition: color 0.3s, background-color 0.3s;
+		}
+
+		&__link:hover,
+		.active {
+			color: $white;
+			background-color: $black;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav {
+		&__link {
+			font-size: 1.8rem;
+		}
+
+		&__logo {
+			font-size: 4.4rem;
+
+			img {
+				width: 5.5rem;
+				height: 5.5rem;
+			}
+		}
+	}
+}
+
+.show {
+	display: block;
+}
+
+.show-flex {
+	display: flex;
+}
+
+.hide {
+	display: none;
 }

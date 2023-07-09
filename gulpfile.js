@@ -16,11 +16,11 @@ const paths = {
 	html: './html/**/*.kit',
 	sass: './src/sass/*.scss',
 	js: './src/js/**/*.js',
-	img: './src/images/*',
+	img: './src/img/*',
 	dist: './dist',
 	sassDest: './dist/css',
 	jsDest: './dist/js',
-	imgDest: './dist/images',
+	imgDest: './dist/img',
 };
 
 function sassCompiler(done) {
@@ -55,7 +55,7 @@ function javaScript(done) {
 }
 
 function convertImages(done) {
-	src(paths.js).pipe(imagemin()).pipe(dest(paths.imgDest));
+	src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest));
 	done();
 }
 
