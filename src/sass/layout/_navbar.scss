@@ -1,0 +1,91 @@
+@use '../utilities/colors' as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 60px;
+	width: 100%;
+	background-color: $white;
+	font-size: 1.4rem;
+	background-color: $white;
+	z-index: 10;
+
+	&__box {
+		position: relative;
+		z-index: 100;
+
+		&-close {
+			transform: rotate(360deg) scale(0);
+		}
+
+		&-burger {
+			transform: scale(0);
+		}
+
+		&-burger,
+		&-close {
+			position: absolute;
+			top: -4rem;
+			left: -4rem;
+			padding: 0.35em;
+			font-size: 4.4rem;
+			background: none;
+			border: none;
+			opacity: 0;
+			transition: transform 1s, opacity 1s;
+			cursor: pointer;
+		}
+	}
+
+	&__links--mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		transform: translateX(101%);
+		width: 100vw;
+		height: 100vh;
+		font-size: 3rem;
+		background-color: $white;
+		transition: transform 1s;
+	}
+
+	&__link {
+		width: 60%;
+		text-align: center;
+		padding: 0.4em 0.8em;
+		margin-bottom: 0.5em;
+		color: $dark;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-bottom: 3px solid $dark;
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.4rem;
+		font-weight: 400;
+		color: $dark;
+		text-decoration: none;
+
+		img {
+			width: 4rem;
+			height: 4rem;
+		}
+	}
+
+	&__links--desktop {
+		display: none;
+		height: 100%;
+		font-size: 1.6rem;
+	}
+}
