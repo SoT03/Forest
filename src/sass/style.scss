@@ -37,7 +37,7 @@ body {
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.nav {
 		height: 100px;
 
@@ -89,19 +89,3 @@ body {
 		}
 	}
 }
-
-.show-nav-burger {
-	transform: scale(1);
-	opacity: 1;
-}
-
-.show-nav-close {
-	transform: rotate(0) scale(1);
-	opacity: 1;
-}
-
-.show-nav {
-	transform: translateX(0);
-}
-
-//animations

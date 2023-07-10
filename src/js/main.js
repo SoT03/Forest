@@ -8,6 +8,18 @@ const handleMobileMenu = () => {
 	navBurger.classList.toggle('show-nav-burger');
 	navClose.classList.toggle('show-nav-close');
 	navMobileMenu.classList.toggle('show-nav');
+
+	handleNavItemsAnimation()
+};
+
+const handleNavItemsAnimation = () => {
+	let delayTime = 0;
+
+	navLinks.forEach((item) => {
+		item.classList.toggle('nav-items-animation');
+		item.style.animationDelay = '.' + delayTime + 's';
+		delayTime++;
+	});
 };
 
 navLinks.forEach((link) => link.addEventListener('click', handleMobileMenu));

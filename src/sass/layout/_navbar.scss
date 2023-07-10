@@ -89,3 +89,30 @@
 		font-size: 1.6rem;
 	}
 }
+
+.show-nav-burger {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.show-nav-close {
+	transform: rotate(0) scale(1);
+	opacity: 1;
+}
+
+.show-nav {
+	transform: translateX(0);
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
+  }
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
