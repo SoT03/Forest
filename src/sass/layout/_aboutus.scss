@@ -1,0 +1,30 @@
+@use '../utilities/colors' as *;
+
+.aboutus {
+	padding: 2em 1.5em;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__img {
+		margin-bottom: 0.5em;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__box {
+		&-title {
+			font-size: 2rem;
+			margin: 0.5em 0;
+		}
+
+		&-text {
+			font-size: 1.6rem;
+			line-height: 1.6;
+		}
+	}
+}

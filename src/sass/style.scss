@@ -8,16 +8,24 @@
 }
 
 html {
-	font-size: 10px;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 78px;
 }
 
 body {
 	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #333;
+	font-size: 1.6rem;
+	overflow-x: hidden;
 }
 
 @media (min-width: 576px) {
+	.section-title {
+		font-size: 3.6rem;
+		margin-bottom: 1.5em;
+	}
+
 	.nav {
 		height: 80px;
 	}
@@ -26,6 +34,20 @@ body {
 		height: 400px;
 		margin-top: 80px;
 		font-size: 1.6rem;
+	}
+
+	.aboutus {
+		padding: 3em 2em;
+
+		&__box {
+			&-title {
+				font-size: 2.2rem;
+			}
+
+			&-text {
+				font-size: 1.6rem;
+			}
+		}
 	}
 }
 
@@ -77,9 +99,51 @@ body {
 			font-size: 2.2rem;
 		}
 	}
+
+	.aboutus {
+		&__container {
+			flex-direction: row;
+		}
+
+		&__img {
+			display: flex;
+			align-items: center;
+			width: calc(50%);
+			margin-right: 2em;
+			img {
+				max-height: 380px;
+			}
+		}
+
+		&__box {
+			width: 50%;
+			margin-bottom: 2em;
+		}
+	}
+}
+
+@media (min-width: 996px) {
+	.section-title {
+		font-size: 4rem;
+		margin: 0.5em 0 1.5em 0;
+	}
+	.aboutus {
+		&__box {
+			&-title {
+				font-size: 2.4rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
+	.section-title {
+		font-size: 4.8rem;
+	}
 	.nav {
 		&__link {
 			font-size: 1.8rem;
@@ -102,6 +166,23 @@ body {
 
 		&__text {
 			font-size: 2.6rem;
+		}
+	}
+
+	.aboutus {
+		&__img {
+			margin-right: 4em;
+		}
+
+		&__box {
+			&-title {
+				font-size: 3rem;
+				margin: 1em 0;
+			}
+
+			&-text {
+				line-height: 2;
+			}
 		}
 	}
 }
