@@ -120,6 +120,15 @@ body {
 			margin-bottom: 2em;
 		}
 	}
+
+	.hero {
+		font-size: 2.2rem;
+
+		&__text {
+			padding: 1em 3em;
+			border: 1px solid $white;
+		}
+	}
 }
 
 @media (min-width: 996px) {
@@ -136,6 +145,18 @@ body {
 			&-text {
 				font-size: 1.8rem;
 			}
+		}
+	}
+
+	.hero {
+		background-image: url(../img/girl_big.jpg);
+		background-attachment: fixed;
+		font-size: 2.4rem;
+
+		&__text {
+			padding: 1em 4em;
+			font-weight: normal;
+			border: 1px solid $white;
 		}
 	}
 }
@@ -183,6 +204,15 @@ body {
 			&-text {
 				line-height: 2;
 			}
+		}
+	}
+
+	.hero {
+		font-size: 2.8rem;
+
+		&__text {
+			width: 100%;
+			border: 1px solid $white;
 		}
 	}
 }
