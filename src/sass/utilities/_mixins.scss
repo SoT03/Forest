@@ -8,3 +8,10 @@
 	content: '';
 	z-index: -1;
 }
+
+@mixin before {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '';
+}
