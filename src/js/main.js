@@ -4,6 +4,7 @@ const navClose = document.querySelector('.nav__box-close');
 const navBox = document.querySelector('.nav__box');
 const navMobileMenu = document.querySelector('.nav__links--mobile');
 const navLinks = navMobileMenu.querySelectorAll('.nav__link');
+const footerYear = document.querySelector('.footer__year');
 
 const handleMobileMenu = () => {
 	navBurger.classList.toggle('show-nav-burger');
@@ -23,6 +24,8 @@ const handleNavItemsAnimation = () => {
 		delayTime++;
 	});
 };
+
+footerYear.textContent = new Date().getFullYear();
 
 navLinks.forEach((link) => link.addEventListener('click', handleMobileMenu));
 
