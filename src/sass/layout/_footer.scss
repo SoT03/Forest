@@ -1,0 +1,26 @@
+@use '../utilities/colors' as *;
+@use '../utilities/mixins' as *;
+
+.footer {
+	padding: 1.5em;
+	background-color: #f0f0f0;
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 0.5em;
+		font-size: 3.4rem;
+
+		img {
+			height: 42px;
+			width: 42px;
+		}
+	}
+}

@@ -276,45 +276,45 @@ body {
 			border: 1px solid $white;
 		}
 	}
-}
-.offers {
-	&__subtitle {
-		font-size: 2.4rem;
-	}
-
-	&__card {
-		margin: 1em 1.5em;
-
-		&-title {
-			font-size: 3rem;
+	.offers {
+		&__subtitle {
+			font-size: 2.4rem;
 		}
 
-		&-price {
-			font-size: 4.8rem;
-		}
+		&__card {
+			margin: 1em 1.5em;
 
-		&-option {
-			font-size: 2rem;
-		}
-	}
-	&__text {
-		font-size: 2.2rem;
-		&-link {
-			&:before {
-				@include before;
-				width: 100%;
-				height: 2px;
-				background-color: $special-color;
-				transition: height 0.5s;
-				z-index: -1;
+			&-title {
+				font-size: 3rem;
 			}
 
-			&:hover::before {
-				height: 100%;
+			&-price {
+				font-size: 4.8rem;
 			}
 
-			&:hover {
-				color: $white;
+			&-option {
+				font-size: 2rem;
+			}
+		}
+		&__text {
+			font-size: 2.2rem;
+			&-link {
+				&:before {
+					@include before;
+					width: 100%;
+					height: 2px;
+					background-color: $special-color;
+					transition: height 0.5s;
+					z-index: -1;
+				}
+
+				&:hover::before {
+					height: 100%;
+				}
+
+				&:hover {
+					color: $white;
+				}
 			}
 		}
 	}
