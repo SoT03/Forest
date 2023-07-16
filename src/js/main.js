@@ -1,3 +1,4 @@
+const body = document.body;
 const navBurger = document.querySelector('.nav__box-burger');
 const navClose = document.querySelector('.nav__box-close');
 const navBox = document.querySelector('.nav__box');
@@ -8,8 +9,9 @@ const handleMobileMenu = () => {
 	navBurger.classList.toggle('show-nav-burger');
 	navClose.classList.toggle('show-nav-close');
 	navMobileMenu.classList.toggle('show-nav');
+	body.classList.toggle('stop-scrolling');
 
-	handleNavItemsAnimation()
+	handleNavItemsAnimation();
 };
 
 const handleNavItemsAnimation = () => {

@@ -110,6 +110,11 @@
 	animation: navItemsAnimation 1s both;
 }
 
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
 @keyframes navItemsAnimation {
 	from {
 		transform: translateX(200%);
