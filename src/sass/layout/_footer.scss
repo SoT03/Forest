@@ -39,10 +39,15 @@
 		}
 
 		&-link {
-			color: #222;
+			color: #333;
 			font-size: 1.8rem;
 			padding: 0.3em;
 			text-decoration: none;
+			transition: color 0.3s;
+
+			&:hover {
+				color: #111;
+			}
 
 			&:last-child {
 				margin-bottom: 0.5em;
