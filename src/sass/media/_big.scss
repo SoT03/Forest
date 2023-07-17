@@ -1,0 +1,217 @@
+@use '../utilities/colors' as *;
+@use '../utilities/mixins' as *;
+
+@media (min-width: 996px) {
+	.section-title {
+		font-size: 4rem;
+		margin: 0.5em 0 1.5em 0;
+	}
+	.aboutus {
+		&__box {
+			&-title {
+				font-size: 2.4rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.hero {
+		background-image: url(../img/girl_big.jpg);
+		background-attachment: fixed;
+		font-size: 2.4rem;
+
+		&__text {
+			padding: 1em 4em;
+			font-weight: 700;
+			border: 1px solid $white;
+		}
+	}
+
+	.offers {
+		&__subtitle {
+			font-size: 2.2rem;
+		}
+
+		&__card {
+			max-width: 340px;
+			margin: 1em 1em;
+
+			&-title {
+				font-size: 2.6rem;
+			}
+
+			&-price {
+				font-size: 4rem;
+			}
+
+			&-option {
+				font-size: 1.8rem;
+			}
+		}
+
+		&__text {
+			margin-top: 1em;
+			font-size: 2rem;
+		}
+	}
+
+	.footer {
+		&__header {
+			flex-direction: row;
+		}
+
+		&__img {
+			width: 50%;
+			font-size: 5.4rem;
+
+			img {
+				height: 64px;
+				width: 64px;
+			}
+		}
+
+		&__box {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+			width: 50%;
+		}
+
+		&__lower {
+			margin: 2em 0 1em 0;
+
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.section-title {
+		font-size: 4.8rem;
+	}
+	.nav {
+		&__link {
+			font-size: 1.8rem;
+		}
+
+		&__logo {
+			font-size: 4.4rem;
+
+			img {
+				width: 5.5rem;
+				height: 5.5rem;
+			}
+		}
+	}
+
+	.header {
+		height: 450px;
+		text-align: left;
+		font-size: 2.2rem;
+
+		&__text {
+			font-size: 2.6rem;
+		}
+	}
+
+	.aboutus {
+		&__img {
+			margin-right: 4em;
+		}
+
+		&__box {
+			&-title {
+				font-size: 3.2rem;
+				margin: 1em 0;
+			}
+
+			&-text {
+				line-height: 2;
+			}
+		}
+	}
+
+	.hero {
+		font-size: 3.2rem;
+
+		&__text {
+			width: 100%;
+			border: 1px solid $white;
+		}
+	}
+	.offers {
+		&__subtitle {
+			font-size: 2.4rem;
+		}
+
+		&__card {
+			margin: 1em 1.5em;
+
+			&-title {
+				font-size: 3rem;
+			}
+
+			&-price {
+				font-size: 4.8rem;
+			}
+
+			&-option {
+				font-size: 2rem;
+			}
+		}
+		&__text {
+			font-size: 2.2rem;
+			&-link {
+				&:before {
+					@include before;
+					width: 100%;
+					height: 2px;
+					background-color: $special-color;
+					transition: height 0.5s;
+					z-index: -1;
+				}
+
+				&:hover::before {
+					height: 100%;
+				}
+
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.footer {
+		&__img {
+			display: flex;
+			font-size: 6rem;
+
+			img {
+				height: 72px;
+				width: 72px;
+			}
+		}
+
+		&__header {
+			align-items: flex-start;
+			padding: 2em 0;
+		}
+
+		&__col {
+			&-title {
+				font-size: 2.8rem;
+				margin-bottom: 0.5em;
+			}
+
+			&-link {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
