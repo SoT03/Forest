@@ -11,19 +11,27 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	height: 80vh;
+	height: 65vh;
 	width: 100%;
 	color: $white;
+	background-color: $dark;
 	max-width: 1920px;
-	margin-top: 100px;
+	margin-top: 60px;
 	overflow: hidden;
 	&__box {
+		position: absolute;
+		right: -102%;
+		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		width: 100%;
+		text-align: center;
+		width: 100vw;
 		height: 100%;
+		padding: 0 2em;
 		background-position: center;
+		opacity: 0;
+		transition: right 1s, opacity 0.7s;
 		z-index: 0;
 
 		&::before {
@@ -31,20 +39,18 @@
 		}
 
 		&-title {
-			margin-bottom: 0.2em;
-			font-size: 4rem;
+			margin-bottom: 0.5em;
+			font-size: 2.2rem;
 			text-transform: uppercase;
 		}
 
 		&-text {
 			margin-bottom: 1.5em;
-			font-size: 2rem;
 		}
 
 		&-link {
 			color: $white;
 			background-color: $dark;
-			font-size: 2.2rem;
 			text-decoration: none;
 			text-transform: uppercase;
 			border-radius: 8px;
@@ -57,21 +63,19 @@
 		}
 
 		&[data-number='0'] {
-			display: none;
 			background-image: url(../img/family_big.jpg);
 		}
 		&[data-number='1'] {
-			display: none;
 			background-image: url(../img/school_big.jpg);
 		}
 		&[data-number='2'] {
-			display: none;
 			background-image: url(../img/company_big.jpg);
 		}
 	}
 
 	&__btn {
 		position: absolute;
+		bottom: 0.5em;
 		padding: 0.5em;
 		color: $white;
 		font-size: 4rem;
@@ -89,6 +93,31 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.slider {
+		&__box {
+			padding: 2em 4em 0;
+			&-title {
+				margin-bottom: 0.5em;
+				font-size: 3rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+			}
+
+			&-link {
+				font-size: 2.2rem;
+			}
+		}
+		&__btn {
+			bottom: 50%;
+			transform: translateY(50%);
+		}
+	}
+}
+
 .show {
-	display: flex !important;
+	right: 0 !important;
+	opacity: 1;
 }
