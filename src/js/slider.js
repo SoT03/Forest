@@ -2,7 +2,7 @@ const slider = document.querySelector('.slider');
 const sliderImges = document.querySelectorAll('.slider__box');
 const leftBtn = document.querySelector('.slider__btn--left');
 const rightBtn = document.querySelector('.slider__btn--right');
-const sliderSpeed = 3000;
+const sliderSpeed = 4000;
 
 let prev;
 let index = 0;

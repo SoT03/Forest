@@ -93,6 +93,17 @@
 	}
 }
 
+.offers {
+	padding-bottom: 6em;
+	&:nth-child(odd) {
+		background-color: #f0f0f0;
+	}
+
+	&__card {
+		background-color: $white;
+	}
+}
+
 @media (min-width: 768px) {
 	.slider {
 		&__box {
