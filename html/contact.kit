@@ -16,25 +16,31 @@
             <div class="contact__box">
                 <form action="" class="contact__form">
                     <div class="contact__form-box">
-                        <label for="" class="contact__form-label">Imię</label>
-                        <input type="text" class="contact__form-input" placeholder="Podaj swoje imię">
+                        <label for="name" class="contact__form-label">Imię</label>
+                        <input type="text" class="contact__form-input" placeholder="Podaj swoje imię" id="name">
                         <p class="contact__error"></p>
                     </div>
                     <div class="contact__form-box">
-                        <label for="" class="contact__form-label">Nazwisko</label>
-                        <input type="text" class="contact__form-input" placeholder="Podaj swoje nazwisko">
+                        <label for="surname" class="contact__form-label">Nazwisko</label>
+                        <input type="text" class="contact__form-input" placeholder="Podaj swoje nazwisko" id="surname">
                         <p class="contact__error"></p>
                     </div>
                     <div class="contact__form-box">
-                        <label for="" class="contact__form-label">E-mail</label>
-                        <input type="text" class="contact__form-input" placeholder="Podaj adres e-mail">
+                        <label for="email" class="contact__form-label">E-mail</label>
+                        <input type="text" class="contact__form-input" placeholder="Podaj adres e-mail" id="email">
                         <p class="contact__error"></p>
                     </div>
                     <div class="contact__form-box">
-                        <label for="" class="contact__form-label">Wiadomość</label>
-                        <textarea name="" id="" cols="30" rows="10" class="contact__form-textarea"></textarea>
+                        <label for="text" class="contact__form-label">Wiadomość</label>
+                        <textarea id="text" cols="30" rows="10" class="contact__form-textarea"></textarea>
                         <p class="contact__error"></p>
                     </div>
+                    <div class="contact__form-box--data">
+                        <input type="checkbox" id="personal-data" class="contact__form-box--checkbox">
+                        <p class="contact__form-box--para">Zgoda na przetwarzanie danych</p>
+                        <p class="contact__error"></p>
+                    </div>
+
 
                     <div class="contact__btn-box">
 
@@ -51,11 +57,18 @@
             </div>
         </div>
 
+        <dialog class="popup">
+            <div class="popup__box">
+                <p class="popup__box-text">Wiadomość wysłana pomyślnie !</p>
+                <button class="popup__box-btn">Zamknij</button>
 
+            </div>
+        </dialog>
     </div>
 
     <!-- @include "footer.kit" -->
 
+    <script src="./dist/js/contact.min.js"></script>
     <script src="./dist/js/main.min.js"></script>
 </body>
 
